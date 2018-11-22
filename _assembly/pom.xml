@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>reactive</artifactId>
+    <groupId>com.rds.demo</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>_assembly</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>_index</artifactId>
+      <version>${project.version}</version>
+      <type>pom</type>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>biz.aQute.bnd</groupId>
+        <artifactId>bnd-export-maven-plugin</artifactId>
+        <configuration>
+          <resolve>true</resolve>
+          <failOnChanges>true</failOnChanges>
+          <bndruns>
+            <bndrun>application.bndrun</bndrun>
+          </bndruns>
+        </configuration>
+      </plugin>
+
+      <!-- Uncomment to enable building a Docker image for the application
+      <plugin>
+        <groupId>com.spotify</groupId>
+        <artifactId>dockerfile-maven-plugin</artifactId>
+        <version>1.3.7</version>
+        <executions>
+          <execution>
+            <id>default</id>
+            <goals>
+              <goal>build</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <repository>${project.groupId}/application</repository>
+          <tag>${project.version}</tag>
+        </configuration>
+      </plugin>
+      -->
+    </plugins>
+  </build>
+
+</project>

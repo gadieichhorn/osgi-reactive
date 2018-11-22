@@ -1,0 +1,41 @@
+-standalone: ../_index/target/index.xml
+
+# Apache Felix
+-runfw: org.apache.felix.framework
+
+## Eclipse Equinox
+# -runfw: org.eclipse.osgi
+# -runproperties.equinox: osgi.console=, osgi.console.enable.builtin=false
+
+## Knopflerfish
+# -runfw: org.knopflerfish.framework
+
+-runee: JavaSE-1.8
+-runprovidedcapabilities: ${native_capability}
+
+-resolve.effective: active; skip:="osgi.service"
+
+
+# This blacklist is used to obtain a stable resolve.
+# The packages should be supplied by the ConfigAdmin
+# and SCR implemementation bundles.
+-runblacklist: \
+    bnd.identity;id=org.osgi.service.cm,\
+    bnd.identity;id=org.osgi.service.component
+
+-runrequires: \
+    osgi.identity;filter:='(osgi.identity=org.apache.felix.eventadmin)',\
+    osgi.identity;filter:='(osgi.identity=org.apache.felix.metatype)',\
+    osgi.identity;filter:='(osgi.identity=api)',\
+    osgi.identity;filter:='(osgi.identity=publisher)',\
+    osgi.identity;filter:='(osgi.identity=consumer)'
+
+-runbundles: \
+	api;version='[1.0.0,1.0.1)',\
+	consumer;version='[1.0.0,1.0.1)',\
+	org.apache.felix.eventadmin;version='[1.4.10,1.4.11)',\
+	org.apache.felix.metatype;version='[1.1.6,1.1.7)',\
+	org.apache.felix.scr;version='[2.0.14,2.0.15)',\
+	org.eclipse.osgi;version='[3.12.50,3.12.51)',\
+	publisher;version='[1.0.0,1.0.1)'
+
