@@ -9,14 +9,16 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.felix:org.apache.felix.framework:5.6.10" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.platform:org.eclipse.osgi:3.12.50" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.felix:org.apache.felix.scr:2.0.14" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.felix:org.apache.felix.scr:2.1.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.codehaus.mojo:animal-sniffer-annotations:1.9" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.felix:org.apache.felix.configadmin:1.8.16" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.felix:org.apache.felix.metatype:1.1.6" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.felix:org.apache.felix.configadmin:1.9.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.felix:org.apache.felix.metatype:1.2.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: net.sf.kxml:kxml2:2.2.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: xmlpull:xmlpull:1.1.3.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.felix:org.apache.felix.eventadmin:1.4.10" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.felix:org.apache.felix.log:1.2.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.osgi:osgi.core:6.0.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.osgi:org.osgi.service.log:1.4.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.felix:org.apache.felix.eventadmin:1.5.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.felix:org.apache.felix.fileinstall:3.6.4" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: io.reactivex.rxjava2:rxjava:2.2.3" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.reactivestreams:reactive-streams:1.0.2" level="project" />
