@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.rds.demo</groupId>
   <artifactId>publisher</artifactId>
+  <name>Reactive :: Publisher</name>
 
   <dependencies>
 
@@ -30,6 +30,18 @@
     </dependency>
 
     <dependency>
+      <groupId>io.reactivex.rxjava2</groupId>
+      <artifactId>rxjava</artifactId>
+      <version>${rxjava.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>api</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
     </dependency>
@@ -41,7 +53,9 @@
       <scope>runtime</scope>
       <type>pom</type>
     </dependency>
-  </dependencies>
+
+    </dependencies>
+
 
   <build>
     <plugins>

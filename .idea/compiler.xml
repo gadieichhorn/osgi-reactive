@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="_assembly" />
+        <module name="_index" />
+        <module name="api" />
+        <module name="consumer" />
+        <module name="publisher" />
+        <module name="test" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="_assembly" target="1.8" />
+      <module name="_distro" target="1.8" />
+      <module name="_index" target="1.8" />
+      <module name="api" target="1.8" />
+      <module name="consumer" target="1.8" />
+      <module name="osgi-reactive" target="1.8" />
+      <module name="publisher" target="1.8" />
+      <module name="test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

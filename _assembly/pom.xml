@@ -10,6 +10,7 @@
   </parent>
 
   <artifactId>_assembly</artifactId>
+  <name>Reactive :: Assembly</name>
 
   <dependencies>
     <dependency>

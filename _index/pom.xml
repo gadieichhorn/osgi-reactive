@@ -11,6 +11,8 @@
 
   <artifactId>_index</artifactId>
   <packaging>jar</packaging>
+  <name>Reactive :: Idex</name>
+
 
   <dependencies>
     <!-- Distribution Dependency -->

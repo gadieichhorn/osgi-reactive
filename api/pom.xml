@@ -1,60 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <artifactId>reactive</artifactId>
-    <groupId>com.rds.demo</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
+    <parent>
+        <artifactId>reactive</artifactId>
+        <groupId>com.rds.demo</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-  <groupId>com.rds.demo</groupId>
-  <artifactId>api</artifactId>
+    <artifactId>api</artifactId>
+    <name>Reactive :: API</name>
 
-  <dependencies>
+    <dependencies>
 
-    <dependency>
-      <groupId>org.osgi</groupId>
-      <artifactId>osgi.core</artifactId>
-    </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>osgi.core</artifactId>
+        </dependency>
 
-    <dependency>
-      <groupId>org.osgi</groupId>
-      <artifactId>osgi.cmpn</artifactId>
-    </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>osgi.cmpn</artifactId>
+        </dependency>
 
-    <dependency>
-      <groupId>org.osgi</groupId>
-      <artifactId>osgi.annotation</artifactId>
-    </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>osgi.annotation</artifactId>
+        </dependency>
 
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-    </dependency>
+        <dependency>
+            <groupId>io.reactivex.rxjava2</groupId>
+            <artifactId>rxjava</artifactId>
+            <version>${rxjava.version}</version>
+        </dependency>
 
-    <dependency>
-      <groupId>${project.parent.groupId}</groupId>
-      <artifactId>_distro</artifactId>
-      <version>${project.version}</version>
-      <scope>runtime</scope>
-      <type>pom</type>
-    </dependency>
-  </dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>biz.aQute.bnd</groupId>
-        <artifactId>bnd-indexer-maven-plugin</artifactId>
-      </plugin>
+        <dependency>
+            <groupId>${project.parent.groupId}</groupId>
+            <artifactId>_distro</artifactId>
+            <version>${project.version}</version>
+            <scope>runtime</scope>
+            <type>pom</type>
+        </dependency>
+    </dependencies>
 
-      <plugin>
-        <groupId>biz.aQute.bnd</groupId>
-        <artifactId>bnd-baseline-maven-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
+    <!--<build>-->
+    <!--<plugins>-->
+    <!--<plugin>-->
+    <!--<groupId>biz.aQute.bnd</groupId>-->
+    <!--<artifactId>bnd-indexer-maven-plugin</artifactId>-->
+    <!--</plugin>-->
+
+    <!--<plugin>-->
+    <!--<groupId>biz.aQute.bnd</groupId>-->
+    <!--<artifactId>bnd-baseline-maven-plugin</artifactId>-->
+    <!--</plugin>-->
+    <!--</plugins>-->
+    <!--</build>-->
 
 </project>
