@@ -1,27 +1,31 @@
-package com.rds.demo.test;
+package com.rds.demo.consumer;
 
-import com.rds.demo.api.FlowableProvider;
+import com.rds.demo.api.EventTopic;
 import io.reactivex.disposables.Disposable;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 
-@Component
-public class StatusFolowableConsumer {
+@Component(
+        immediate = true
+)
+public class StatusConsumerProvider {
 
-    Disposable disposable;
+    private Disposable disposable;
 
     @Reference
-    private FlowableProvider<String> status;
+    private EventTopic<String> status;
 
     @Activate
     public void activate() {
-        disposable = status.subscribe(System.out::println);
+        System.out.println("ACTIVATE");
+        disposable = status.stream().subscribe(System.out::println);
     }
 
     @Deactivate
     public void deactivate() {
+        System.out.println("DEACTIVATE");
         disposable.dispose();
     }
 

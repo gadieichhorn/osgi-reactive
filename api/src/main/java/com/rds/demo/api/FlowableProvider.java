@@ -1,13 +1,12 @@
 package com.rds.demo.api;
 
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
+import io.reactivex.Flowable;
 import org.osgi.annotation.versioning.ProviderType;
 
 @ProviderType
 public interface FlowableProvider<T> {
 
-    Disposable subscribe(Consumer<T> onNext);
+    Flowable<T> source();
 
 }
 

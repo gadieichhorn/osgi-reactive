@@ -6,8 +6,8 @@ import org.reactivestreams.Subscriber;
 import java.util.Observable;
 
 @ProviderType
-public interface Consumer<T> {
+public interface ConsumerProvider<T> {
 
-    Subscriber<T> stream();
+    void process(T event);
 
 }
