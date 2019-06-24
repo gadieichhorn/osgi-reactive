@@ -4,7 +4,7 @@ import com.rds.demo.api.SchedulersFactory;
 import io.reactivex.Scheduler;
 import io.reactivex.schedulers.Schedulers;
 
-public class TestSchedulerFactory implements SchedulersFactory {
+public class TestSchedulersFactory implements SchedulersFactory {
 
     @Override
     public Scheduler pooled() {

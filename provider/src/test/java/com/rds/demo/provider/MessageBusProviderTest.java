@@ -11,13 +11,14 @@ public class MessageBusProviderTest {
     public void publishMessageTest() {
         TestObserver<Message> test = TestObserver.create();
 
-        MessageBus<Message> bus = new MessageBusProvider<>(new TestSchedulerFactory());
+        MessageBus<Message> bus = new MessageBusProvider<>(new TestSchedulersFactory());
 
         bus.subscribe(test);
         bus.publish(new TestMessage());
 
         test.assertValueCount(1);
         test.assertNoErrors();
+        test.assertNotComplete();
     }
 
 }

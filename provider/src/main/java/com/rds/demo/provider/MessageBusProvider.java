@@ -17,9 +17,16 @@ public class MessageBusProvider<T extends Message> implements MessageBus<T> {
     @Reference
     private SchedulersFactory schedulersFactory;
 
+    /**
+     * Use injected dependencies
+     */
     public MessageBusProvider() {
     }
 
+    /**
+     * Override the injected of {@link SchedulersFactory} for none OSGi unit testing
+     * @param schedulersFactory {@link SchedulersFactory} instance
+     */
     public MessageBusProvider(SchedulersFactory schedulersFactory) {
         this.schedulersFactory = schedulersFactory;
     }
