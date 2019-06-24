@@ -15,6 +15,7 @@
         <module>_index</module>
         <module>_assembly</module>
         <module>api</module>
+        <module>provider</module>
         <module>publisher</module>
         <module>consumer</module>
         <module>test</module>

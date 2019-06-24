@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="_assembly" />
-        <module name="_index" />
-        <module name="api" />
-        <module name="consumer" />
-        <module name="publisher" />
         <module name="test" />
+        <module name="api" />
+        <module name="provider" />
+        <module name="publisher" />
+        <module name="_index" />
+        <module name="_assembly" />
+        <module name="consumer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,6 +22,7 @@
       <module name="api" target="1.8" />
       <module name="consumer" target="1.8" />
       <module name="osgi-reactive" target="1.8" />
+      <module name="provider" target="1.8" />
       <module name="publisher" target="1.8" />
       <module name="test" target="1.8" />
     </bytecodeTargetLevel>
