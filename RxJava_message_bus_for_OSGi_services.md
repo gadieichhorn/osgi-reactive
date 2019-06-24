@@ -394,9 +394,8 @@ RxJAva gives us powerful tools for building and testing applications but we need
 
 I hope this was helpful if you are working with OSGI or RxJava.
 
-
 ## The code
-Please feel free to use and port or contribute.
+Please feel free to use, port and contribute.
 
 https://github.com/gadieichhorn/osgi-reactive
 
@@ -406,4 +405,6 @@ Paulina's blog post ->
 https://medium.com/@PaulinaSadowska/writing-unit-tests-on-asynchronous-events-with-rxjava-and-rxkotlin-1616a27f69aa
 
 EffectiveOSGi -> 
+https://github.com/effectiveosgi
+
 
