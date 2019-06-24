@@ -1,2 +1,2 @@
 # osgi-reactive
-Rative streams in OSGi as service bus
+Reactive message bus using RxJava as OSGi service.
