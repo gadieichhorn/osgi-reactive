@@ -7,12 +7,19 @@
 #-runvm: "-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=7001"
 -resolve.effective: active; skip:='osgi.service'
 
+-runproperties: \
+#    logback.configurationFile=file:${.}/src/main/resources/logback.xml,\
+	felix.cm.loglevel=1,\
+    felix.fileinstall.noInitialDelay=true,\
+	felix.fileinstall.dir=${.}/config
+
 -runrequires: \
     osgi.identity;filter:='(osgi.identity=org.apache.felix.eventadmin)',\
     osgi.identity;filter:='(osgi.identity=org.apache.felix.metatype)',\
     osgi.identity;filter:='(osgi.identity=org.apache.felix.fileinstall)',\
     osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
     osgi.identity;filter:='(osgi.identity=api)',\
+    osgi.identity;filter:='(osgi.identity=provider)',\
     osgi.identity;filter:='(osgi.identity=publisher)',\
     osgi.identity;filter:='(osgi.identity=consumer)',\
     osgi.identity;filter:='(osgi.identity=test)'
@@ -20,6 +27,8 @@
 -runbundles: \
 	api;version='[1.0.0,1.0.1)',\
 	consumer;version='[1.0.0,1.0.1)',\
+	publisher;version='[1.0.0,1.0.1)',\
+	provider;version='[1.0.0,1.0.1)',\
 	io.reactivex.rxjava2.rxjava;version='[2.2.3,2.2.4)',\
 	org.apache.felix.configadmin;version='[1.9.2,1.9.3)',\
 	org.apache.felix.eventadmin;version='[1.5.0,1.5.1)',\
@@ -29,5 +38,4 @@
 	org.apache.felix.scr;version='[2.1.0,2.1.1)',\
 	org.apache.servicemix.bundles.junit;version='[4.12.0,4.12.1)',\
 	org.reactivestreams.reactive-streams;version='[1.0.2,1.0.3)',\
-	publisher;version='[1.0.0,1.0.1)',\
 	test;version='[1.0.0,1.0.1)'

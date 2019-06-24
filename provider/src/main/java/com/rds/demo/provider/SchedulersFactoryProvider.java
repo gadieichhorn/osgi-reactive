@@ -12,7 +12,6 @@ import org.osgi.service.metatype.annotations.Designate;
  * Allow changing the {@link Schedulers} used for different type of operations.
  */
 @Component(
-//        configurationPid = "com.rds.reactive.provider.schedulers.provider",
         name = "com.rds.reactive.provider.schedulers.provider",
         service = SchedulersFactory.class,
         configurationPolicy = ConfigurationPolicy.OPTIONAL)
@@ -26,17 +25,19 @@ public class SchedulersFactoryProvider implements SchedulersFactory {
 
     @Activate
     public void activate(SchedulersFactoryProviderConfiguration cfg) {
-//        cfg._blocking()
+        System.out.println("ACTIVATE");
+        blocking = SchedulerType.get(cfg._blocking()).value();
+        pooled = SchedulerType.get(cfg._pooled()).value();
     }
 
     @Override
     public Scheduler blocking() {
-        return Schedulers.io();
+        return blocking;
     }
 
     @Override
     public Scheduler pooled() {
-        return Schedulers.computation();
+        return pooled;
     }
 
 }

@@ -13,6 +13,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.osgi:osgi.core:6.0.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.osgi:osgi.cmpn:6.0.0" level="project" />
     <orderEntry type="module" module-name="api" />
+    <orderEntry type="module" module-name="provider" />
     <orderEntry type="module" module-name="publisher" />
     <orderEntry type="module" module-name="consumer" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: io.reactivex.rxjava2:rxjava:2.2.3" level="project" />
